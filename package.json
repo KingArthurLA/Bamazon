@@ -1,0 +1,26 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "main": "(bamazonManager.js)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingArthurLA/Bamazon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KingArthurLA/Bamazon/issues"
+  },
+  "homepage": "https://github.com/KingArthurLA/Bamazon#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "inquirer": "^6.2.2",
+    "modules": "^0.4.0",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
