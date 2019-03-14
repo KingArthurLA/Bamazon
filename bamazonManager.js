@@ -135,17 +135,16 @@ function addInventory() {
         }
     ]).then(function(managerAdd) {
 
-              connection.query("UPDATE products SET ? WHERE ?", [{
+            connection.query("UPDATE products SET ? WHERE ?", [{
 
-                  stock_quantity: managerAdd.inputNumber
-              }, {
-                  item_id: managerAdd.inputId
-              }], function(err, res) {
-              });
-          startPrompt();
+                stock_quantity: managerAdd.inputNumber
+            }, {
+                item_id: managerAdd.inputId
+            }], function(err, res) {
+            });
+        startPrompt();
         });
       }
-
 
 
 function addProduct() {
@@ -156,6 +155,11 @@ function addProduct() {
             type: "input",
             name: "inputName",
             message: "Please enter the item name of the new product.",
+        },
+        {
+            type: "input",
+            name: "inputDescription",
+            message: "Please enter the description of the product.",
         },
         {
             type: "input",
@@ -178,7 +182,7 @@ function addProduct() {
 
       connection.query("INSERT INTO products SET ?", {
         product_name: managerNew.inputName,
-        production_description: managerNew.productDescription,
+        product_description: managerNew.inputDescription,
         department_name: managerNew.inputDepartment,
         price: managerNew.inputPrice,
         stock_quantity: managerNew.inputStock
